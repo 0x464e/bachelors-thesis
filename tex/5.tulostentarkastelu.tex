@@ -1,0 +1,41 @@
+Tässä luvussa tarkastellaan löydettyjä tuloksia. Tuloksien pätevyyttä ja luotettavuutta pohditaan vertailemalla niitä aiempiin tuloksiin ja esittämällä kritiikkiä niitä kohtaan. Työn tulokset ovat erilaisten suorituskyvyntestaustyökalujen valintaan vaikuttavien tekijöiden muodossa. Tekijät, jotka löydettiin kirjallisuuskatsauksen avulla, löytyvät tämän työn tulosluvusta \ref{ch:työkalunvalinta}. Luvussa esitetyt tekijät jaettiin selkeyden vuoksi kahteen eri luokkaan. Ensimmäinen luokka oli \hyperref[sec:organisatorisettekijät]{organisatoriset tekijät} ja toinen luokka oli \hyperref[sec:työkalukohtaisettekijät]{työkalukohtaiset tekijät}. 
+
+Organisatoristen tekijöiden alaluvussa löydetyt tekijät jaettiin kolmeen kategoriaan, \hyperref[ssec:hinta]{hintaan}, \hyperref[ssec:tarpeensuuruus]{työkalun tarpeen suuruuteen} ja \hyperref[ssec:tuki]{saatavilla olevaan tukeen}. Hintatekijöissä tietoa perusteltiin eri työkalujen hinnoittelusivuilta löytyviin tietoihin ja numeroihin. Kuitenkin monen työkalun hinnoittelusivussa luki myös mahdollisuus ottaa myyjään suoraan yhteys ja tehdä oma sopimus. Tätä ei otettu huomioon, eikä työssä ole tietoa mahdollisten omien sopimusten sisällöstä. Nämä tuntemattomat tekijät voisivat vaikuttaa joihinkin johtopäätöksiin, jotka tehtiin alaluvussa \ref{ssec:hinta}. Työkalun käytön tarvetta pohdittaessa käytettiin paljon omaa pohdintaa, jota ei ollut perusteltu lähteisiin. Tieto kuitenkin on luonnostaan yleispätevää ja sitä sivuttiin monissa eri lähteissä. Työkaluille saatavilla olevaa tukea käsiteltäessä esitettiin taulukko, jossa vertailtiin Stack Overflow -sivustosta löytyviä kysymysten määrää eri työkalujen välillä. Taulukko antoi selvät tulokset, joista tehtiin johtopäätöksiä. On syytä kuitenkin ottaa huomioon, että Stack Overflow on vain yksi sivusto. On mahdollista, että tietyistä työkaluista puhutaan hyvinkin paljon joissain muissa sivustoissa. 
+
+Työkalukohtaisten tekijöiden alaluvussa löydetyt tekijät jaettiin myös kolmeen kategoriaan, testaustyyppeihin, yhteensopivuuteen ja käytettävyyteen. Tarvittavia testaustyyppejä tarkasteltaessa joitain päätelmiä tehtiin perustuen lähteisiin, jotka ovat yli 10 vuotta vanhoja. Tässä työssä on monia lähteitä, jotka eivät välttämättä edusta alan kaikista uusinta tietoa. Koska tämän työn tuloksia perustellaan lähteillä, eikä ajankohtaisilla henkilökohtaisilla alan ammattilaisen kokemuksilla, on syytä miettiä lähteiden pätevyyttä. Kuitenkin vanhemmista lähteistä löydetyt tiedot ovat usein yleispäteviä, joten on hyvin mahdollista, että tieto on yhä aiheellista. Yhteensopivuustekijöitä käsiteltäessä olisi hyvä olla joitain konkreettisia esimerkkejä siitä, miten suorituskyvyntestaustyökalujen toiminnallisuuksia voidaan laajentaa. Esimerkiksi olisi voitu kehittää oma lisämoduuli, jolla voisi demonstroida tietyn puuttuvan ominaisuuden lisäämistä työkaluun. Kuitenkin kokeellisen osuuden tuottaminen menee yli tämän työn tavoitteiden ja rajausten. Käytettävyyttä käsittelevä alaluku antaa myös esimerkin tässä työssä tehdyistä rajauksista, jotka estävät aiheen kasvamisen liian suureksi. Suorituskyvyntestaustyökalujen käytettävyydestä voisi tarkastella hyvinkin monta eri asiaa. Kuitenkin rajausten takia \hyperref[ssec:käytettävyys]{alaluvussa} päädyttiin käsittelemään vain työkalujen kahta ydintoimintoa, testien luontia ja tulosten analysointia.
+
+Työn tuloksia voidaan käsitellä listana tekijöitä, joita pitää huomioida suorituskyvyntestaustyökalua valittaessa. Tällöin tämän työn tuloksia voidaan vertailla luvussa \ref{ch:johdanto} mainittuihin oppaisiin, joissa on muiden löytämiä listoja tekijöistä. Otetaan vertailuun kaksi Google-haulla löydettyä opasta, joita ei käytetty tämän työn tulosten tuottamiseen. \citeauthor{Tools8ThingsToConsider}in (\citeyear{Tools8ThingsToConsider}) ja \citeauthor{HowToChooseTheRight}in (\citeyear{HowToChooseTheRight}) oppaista löydetyt tekijät on koottu taulukkoon \ref{tab:vertailu}, jossa niitä vertaillaan tämän työn tuloksiin.
+
+\begin{longtable}{|l|l|c|}
+\caption{Nettioppaissa esiteltyjen valintatekijöiden löytyminen tästä työstä}
+\label{tab:vertailu}\\
+\hline
+\multicolumn{1}{|l|}{\textbf{Nettiopas}} & 
+\multicolumn{1}{|l|}{\textbf{Valintatekijä}} & 
+\multicolumn{1}{l|}{\textbf{Tämä työ}} \\ \hline
+\endfirsthead
+%
+\endhead
+%
+\citeauthor{HowToChooseTheRight, Tools8ThingsToConsider} & Protokollien tuki           & \hyperref[ssec:yhteensopivuus]{\cmark}                \\ \hline
+\citeauthor{HowToChooseTheRight, Tools8ThingsToConsider} & Eri testaustyypit           & \hyperref[ssec:tarvittavatestaustyyppi]{\cmark}       \\ \hline
+\citeauthor{HowToChooseTheRight} & Tulosten raportointi        & \hyperref[ssec:käytettävyys]{\cmark}                  \\ \hline
+\citeauthor{HowToChooseTheRight, Tools8ThingsToConsider} & Lisenssimallit              & \hyperref[ssec:hinta]{\cmark}                         \\ \hline
+\citeauthor{HowToChooseTheRight, Tools8ThingsToConsider} & Tuki                        & \hyperref[ssec:tuki]{\cmark}                          \\ \hline
+\citeauthor{HowToChooseTheRight, Tools8ThingsToConsider} & CI/CD                       & \hyperref[ssec:yhteensopivuus]{\cmark}                \\ \hline
+\citeauthor{HowToChooseTheRight, Tools8ThingsToConsider} & Yhteensopivuus              & \hyperref[ssec:yhteensopivuus]{\cmark}                \\ \hline
+\citeauthor{Tools8ThingsToConsider} & Mukautettavuus              & \hyperref[ssec:yhteensopivuus]{\cmark}                \\ \hline
+\citeauthor{HowToChooseTheRight, Tools8ThingsToConsider} & Hinta                       & \hyperref[ssec:hinta]{\cmark}                         \\ \hline
+\citeauthor{HowToChooseTheRight} & Omien palvelimien hinta     & \hyperref[ssec:hinta]{\cmark}                         \\ \hline
+\citeauthor{HowToChooseTheRight} & Osaaminen työmarkkinoilla   & \hyperref[ssec:tuki]{\cmark}                          \\ \hline
+\citeauthor{HowToChooseTheRight} & Nauhoitusominaisuus         & \hyperref[ssec:käytettävyys]{\cmark}                  \\ \hline
+\citeauthor{HowToChooseTheRight} & Parametrisointi             & \hyperref[ssec:käytettävyys]{\cmark}                  \\ \hline
+\citeauthor{HowToChooseTheRight} & Käytettävyys                & \hyperref[ssec:käytettävyys]{\cmark}                  \\ \hline
+\citeauthor{HowToChooseTheRight} & Tapahtuma \& pyyntö         & \xmark                                                \\ \hline
+\citeauthor{HowToChooseTheRight} & Vastauksen vahvistaminen    & \xmark                                                \\ \hline
+\citeauthor{HowToChooseTheRight} & Reaaliaikainen monitorointi & \hyperref[ssec:yhteensopivuus]{\cmark}                \\ \hline
+\end{longtable}
+
+Taulukossa näkyvän vertailun perusteella voidaan sanoa, että tämä työ onnistui hyvin kattavasti löytämään ja käsittelemään tekijöitä, joita oli myös muissa suorituskyvyntestaustyökalun valintaa käsittelevissä töissä. Puuttuvat tekijät eivät tulleet vastaan tämän työn kirjallisuuskatsauksessa ja jäivät sen takia täysin huomiotta. Tekijöiden puuttuminen tästä työstä voi johtua tämän työn rajauksista, kertoa vajaasta kirjallisuuskatsauksesta tai ehkä tekijät eivät vain ole kovin yleisiä ja ovat päässeet ainoastaan \citeauthor{HowToChooseTheRight}in henkilökohtaiselle listalle.
+
+Ylipäätänsä tässä työssä jouduttiin asettamaan paljon rajoitteita, jotta aihe pysyy työn laajuustavoitteissa. Tiettyjä asioita käsiteltiin vain rajallisesti ja joitain asioita jätettiin pois heti aluksi, kuten tutkimusmenetelmää kuvaavassa luvussa \ref{ch:tutkimusmenetelmä} todettiin. Tästä huolimatta taulukossa \ref{tab:vertailu} tehdyn vertailun mukaan työn tulokset olivat hyvin kattavat. Näiden kaikkien päätelmien perusteella voidaan sanoa, että työn tulokset onnistuivat vastaamaan tämän työn tutkimuskysymyksiin.

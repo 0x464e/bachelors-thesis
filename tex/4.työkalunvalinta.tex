@@ -1,0 +1,91 @@
+Suorituskyvyntestaustyökalun valinta voi olla vaikeaa etenkin vaihtoehtojen paljouden takia. Valintaan vaikuttavia tekijöitä on paljon ja eri työkaluja voi olla vaikea vertailla keskenään. Tässä luvussa käydään läpi kirjallisuuskatsauksen tuottamat löydökset ja esitellään tärkeimmät työkalun valintaan vaikuttavat tekijät. Tekijät on jaettu selkeyden vuoksi kahteen eri luokkaan, organisatorisiin ja työkalukohtaisiin tekijöihin.
+
+
+\section{Organisatoriset tekijät}
+\label{sec:organisatorisettekijät}
+Tässä alaluvussa käydään läpi suorituskyvyntestaustyökalun valintaan vaikuttavia tekijöitä, jotka eivät suoraan liity tiettyyn työkaluun. Näitä tekijöitä mietitään erityisesti yrityksen tai organisaation näkökulmasta, ja niitä voi pohtia yleispätevästi ennen kuin miettii tiettyjä työkaluja.
+
+\subsection{Hinta ja kustannukset}
+\label{ssec:hinta}
+Suorituskyvyntestaustyökalut voi jakaa hinnoittelun perusteella kahteen luokkaan, maksullisiin ja maksuttomiin. Maksuttomat työkalut ovat usein myös avoimen lähdekoodin työkaluja, mikä voi tuoda lisämahdollisuuksia mukauttamiseen. Toisaalta suorituskyvyntestaustyökalujen vertailuissa on usein päädytty tuloksiin, joissa monet vertailtavat osa-alueet ovat paremmin toteutettuja maksullisissa työkaluissa \parencite{WebPerformanceTestingTools, ComparativeAnalysisOfWeb}.
+
+Jos valitaan maksullinen työkalu, täytyy miettiä tarkkaan, miten paljon on valmis maksamaan. Työkaluilla on monia erilaisia lisensointimalleja. Työkalun alkumaksun lisäksi täytyy ottaa huomioon sen käyttö- ja ylläpitokulut. Työkalujen hinnoittelu riippuu usein käyttäjän tarpeista. Useimmiten työkaluja tarjotaan ohjelmistopalveluina (engl. \acrlong{saas}, \acrshort{saas}), jolloin hinta riippuu pääosin käyttötunneista ja testikuormien suuruudesta \parencite{WebLOAD, LoadNinja}. Ohjelmistopalveluna ostetulla työkalulla alkumaksu on pieni, mutta työkalun käyttö tuottaa jatkuvia kuluja. Toisaalta työkaluja myydään myös käyttöönotettavaksi paikan päällä, jolloin päästään eroon käyttötuntien hinnoittelusta. Tällöin kuitenkin alkumaksu on suuri ja täytyy myös itse huolehtia työkalun, ja sen vaatimien palvelimien, ylläpitokuluista. \parencite{Gatling} 
+
+Maksullisissa suorituskyvyntestaustyökaluissa ohjelmistopalvelun tai paikan päällä käytettävän työkalun valinta riippuu siis enimmäkseen käytön paljoudesta. Tämän takia perussääntönä toimii, että ohjelmistopalvelu on usein halvempi, jos suorituskyvyntestejä ei ajeta kovin usein \parencite[16]{TheArtOfApplication}.
+
+
+
+\subsection{Tarpeen suuruus}
+\label{ssec:tarpeensuuruus}
+Kuten edellisessä alaluvussa todettiin, suorituskyvyntestaustyökalun hinta riippuu eniten tarpeen suuruudesta. Tästä syystä on hyvä miettiä miten paljon tiettyä suorituskyvyntestaustyökalua tulee tarvitsemaan, ennen kuin sitoutuu sen käyttöön. Työkalun hankkiminen voi olla pitkäaikainen investointi ja toiseen työkaluun vaihtaminen tulevaisuudessa voi tuottaa ison työn. Täytyy miettiä tarkkaan mitkä kaikki projektit tarvitsevat suorituskyvyntestausta ja voisiko yksi työkalu kattaa ne kaikki. Tulevaisuuden suunnitelmat tulee myös miettiä tarkkaan. Saatetaanko projekteja laajentaa tulevaisuudessa? Voivatko testitarpeet muuttua? Näitä kysymyksiä on hyvä miettiä luvussa \ref{sec:työkalukohtaisettekijät} mainittujen työkalukohtaisten tekijöiden kautta. Esimerkiksi tulevaisuudessa voi nousta tarve tietyn protokollan käyttöön, mutta tietty työkalu ei välttämättä tue tätä protokollaa.
+
+Pitkäaikaiseen tarpeeseen soveltuvaa suorituskyvyntestaustyökalua valittaessa on tärkeää tutustua työkalun kypsyyteen. Monet maksulliset työkalut ovat kovin uusia ja kärsivät kypsyyden puutteesta \parencite{ComparativeAnalysisOfWeb}. Kypsyyttä voi analysoida muun muassa työkalun iän, päivitysten ja tuottojen kautta. Jos työkalu on jo monta vuotta vanha, sillä on todennäköisesti vahva perusta. Kuitenkin täytyy myös tutkia saako työkalu enää päivityksiä. Kehitetäänkö työkalua enää aktiivisesti? Onko myyjä aktiivisesti yhteydessä käyttäjiin esimerkiksi uutisten tai tulevaisuuden suunnitelmien muodossa? Maksullisen työkalun tapauksessa sen takana olevan yrityksen tuotot voivat myös kertoa tarinan, jota ei näe ulospäin. Jos yrityksen tuotot ovat kovassa laskussa, tämä voi kertoa työkalun olevan elinkaarensa lopussa.
+\looseness=-1
+
+
+\subsection{Saatavilla oleva tuki}
+\label{ssec:tuki}
+
+Suorituskyvyntestaustyökalun käyttäminen ei välttämättä ole helppoa. Eri työkalujen käytettävyydessä on suuria eroja, kuten luvussa \ref{ssec:käytettävyys} on kerrottu. Mahdollisuus teknisen tuen saamiseen voi olla todella tärkeää, riippuen käyttäjän taidoista ja tehtävien testien monimutkaisuudesta. Ilmaisissa avoimen lähdekoodin työkaluissa tekninen tuki on usein saatavilla yhteisön muodossa. Maksullisissa työkaluissa sen sijaan tekninen tuki on usein saatavilla asiakaspalvelijan muodossa lisämaksua vastaan. Taulukossa \ref{tab:stackoverflow} on vertailtu Stack Overflow -sivustosta löytyvien kysymysten lukumäärää, kun hakusanana käytetään eri suorituskyvyntestaustyökalujen nimiä. Tulokset on haettu 25. maaliskuuta, 2023, osoitteesta ''\url{https://stackoverflow.com/search}``. Stack Overflow on maailman suosituin ohjelmointiaiheinen kysymys--vastaus-sivusto.  
+
+\begin{longtable}{|l|c|c|}
+\caption{Eri työkaluja koskevien kysymysten lukumäärä Stack Overflow -sivustossa}
+\label{tab:stackoverflow}\\
+\hline
+\multicolumn{1}{|c|}{\textbf{Hakusana}} & 
+\multicolumn{1}{|c|}{\textbf{Kysymysten määrä}} & 
+\multicolumn{1}{c|}{\textbf{Hinnoittelu}} \\ \hline
+\endfirsthead
+%
+\endhead
+%
+JMeter             & 47 710   & Maksuton     \\ \hline
+Gatling            & 4 193    & Maksuton     \\ \hline
+LoadRunner         & 3 305    & Maksullinen  \\ \hline
+WebLOAD            & 93       & Maksullinen  \\ \hline
+SmartMeter         & 82       & Maksullinen  \\ \hline
+Kobiton            & 25       & Maksullinen  \\ \hline
+Silk Performer     & 20       & Maksullinen  \\ \hline
+HeadSpin           & 15       & Maksullinen  \\ \hline
+LoadNinja          & 3        & Maksullinen  \\ \hline
+\end{longtable}
+
+Taulukossa JMeter ja Gatling ovat maksuttomia avoimen lähdekoodin suorituskyvyntestaustyökaluja. Kaikki loput työkalut ovat maksullisia. Taulukosta nähdään selkeästi, miten yhteisön tuki on valtavasti suurempi avoimen lähdekoodin työkaluilla. Maksullisista työkaluista ainoastaan erittäin suositulla LoadRunner-työkalulla, joka on julkaistu 30 vuotta sitten, on yli sata kysymystä.
+
+Jos työkalun käyttöön ei ole vahvaa yhteisön tukea, täytyy varmistaa, että myyjän tarjoamat oppimisresurssit ovat riittäviä. Kuinka hyvä ja kattava dokumentaatio työkalulla on? Tarjoaako myyjä koulutusta tai muita opetusmateriaaleja? Opetusmateriaaleja työkalun käyttöön voi myös löytyä myyjän ulkopuolelta, kuten kolmannen osapuolen verkkokursseista. On myös tärkeää pitää työntekijöiden osaaminen mielessä \parencite[15]{TheArtOfApplication}. Tarvittava osaaminen tiettyyn työkaluun saattaa jo löytyä organisaatiosta. Vaihtoehtoisesti jo valmiiksi osaavan työntekijän voi palkata, jos uuden työntekijän palkkaus on aiheellista. 
+\looseness=1
+
+
+
+\section{Työkalukohtaiset tekijät}
+\label{sec:työkalukohtaisettekijät}
+Suoraan suorituskyvyntestaustyökaluihin liittyviä tekijöitä on paljon enemmän kuin organisatorisia tekijöitä. Tässä alaluvussa käydään läpi web-sovelluspalveluiden kannalta tärkeimmät tekijät liittyen suorituskyvyntestaustyökalun valintaan. Näitä tekijöitä mietittäessä ei enää pohdita yleisellä tasolla, vaan tutustutaan tiettyyn työkaluun ja sen tarjoamiin ominaisuuksiin. 
+
+
+\subsection{Tarvittava testaustyyppi}
+\label{ssec:tarvittavatestaustyyppi}
+Suorituskyvyntestaustyyppejä on monia erilaisia. Luvussa \ref{sec:suorituskyvyntestaus} esitettiin viisi eri testaustyyppiä ja joissain lähteissä testaustyyppejä on esitelty vieläkin enemmän. Työkalua valittaessa täytyy miettiä, minkä tyyppisiä suorituskyvyntestejä halutaan ajaa. Tämä sitoutuu lukuun \ref{ssec:tarpeensuuruus}, jossa pohdittiin tarpeen suuruutta. Kaikki työkalut eivät sovellu yhtä hyvin kaikkiin testityyppeihin \parencite{ScrutinizingAutomatedLoadTesting}. Esimerkiksi jos mitataan vasteaikaa verkkosivun lataamisessa, eri työkaluilla saadut tulokset voivat poiketa toisistaan huomattavasti. Yksi työkalu voi laskea mukaan kuvien ja muiden verkkosivun resurssien lataamiseen menevän ajan, kun taas toinen ei laske. \parencite{SoftwareAndPerformanceTestingTools} Myös työkalujen arkkitehtuuri, tai niiden monien erilaisten asetuksien säädöt, voivat aiheuttaa eroja mitatuissa suorituskyvyissä. Esimerkiksi jokin työkalu voi olla kehitetty ohjelmointikielellä, joka vaatii koodin ajamisen virtuaalikoneessa. Java-ohjelmointikieli on tästä yleinen esimerkki, koska Java-ohjelmat ajetaan aina Java-virtuaalikoneessa. Java-virtuaalikone, yleisemmin tunnettu lyhenteellä \acrshort{jvm} (engl. \acrlong{jvm}), hyväksyy monia parametreja, jolla voi säätää virtuaalikoneen toimintaa. Nämä voivat vaikuttaa testituloksiin suuresti. \parencite{PerformanceTestingAnalyzingFifferencesOfResponseTime} 
+\looseness=-1
+
+Työkalujen eroavaisuudet tietyissä testitapauksissa eivät kuitenkaan välttämättä ole este tietyn työkalun käyttöön. Jos ympäristö, jossa testit ajetaan, pidetään samanlaisena, mitatut suorituskyvyt pysyvät vertailukelpoisina toisiinsa nähden. Tällöin voidaan mitata suhteellisia muutoksia eri testiajojen välillä, mikä saattaa olla juuri sitä, mitä halutaan tehdä. Tällaisella testauksella voidaan tarkkailla esimerkiksi koodimuutosten vaikutusta ohjelman suorituskykyyn. Kuitenkin kaikissa testaustyypeissä ei pysty turvautumaan suhteelliseen vertailuun. Tästä hyvänä esimerkkinä toimii skaalautuvuuden testaus. Ohjelmistopalveluina tarjottavat pilvessä ajettavat suorituskyvyntestauspalvelut pystyvät kaikista parhaiten skaalautuvuuden testaukseen \parencite{PerformanceTestingMethodologiesAndTools}. Pilviarkkitehtuurin ansiosta testikuorman kokoa voidaan kasvattaa lähes rajatta. Paikan päällä käyttöönotettavissa työkaluissa sen sijaan tulee vastaan omien palvelimien rajat tai itse työkalun rajat.
+
+
+\subsection{Yhteensopivuus ja mukautettavuus}
+\label{ssec:yhteensopivuus}
+Tarvittavien testaustyyppien jälkeen päästään luonnollisesti pohtimaan suorituskyvyntestaustyökalun yhteensopivuutta ylipäätänsä. Tähän liittyy tarvittavien protokollien tukeminen, teknologioiden yhteensopivuus ja työkalun toimintojen laajentamisen mahdollisuus. Web-sovelluspalveluja testatessa yleisimmät protokollat ovat \acrshort{http}(S) ja \acrshort{soap}. Nämä protokollat ovat laajasti tuettuja, joten tilanne on siltä kannalta hyvä. Kuitenkin protokollia on monia muita ja työkalut tukevat hyvin vaihtelevia määriä niistä. \parencite{Top27PerformanceTestingTools} Tästä syystä protokollien tuki kannattaa aina varmistaa.
+
+Teknologioiden yhteensopivuuteen kannattaa kiinnittää huomiota, jos suorituskyvyntestaukseen liittyy tiettyjä sovelluskehyksiä (engl. framework) tai tiettyjen teknologioiden joitain erityispiirteitä. Hyvänä esimerkkinä näistä toimii taas Java-ohjelmointikieli. Java-poh\-jais\-ten sovellusten testaamisessa on erityisen tärkeää päästä kiinni sovelluksen sisäisiin toimintoihin \parencite[208]{TheArtOfApplication}. Java-sovelluksen sisäisistä toiminnoista voidaan ottaa esimerkiksi Java-oliot (engl. java object). Java-pohjaiset työkalut voivat tukea Java-olioita, mistä voi olla erityistä hyötyä testauksessa. Tällöin työkalu pystyy monitoroimaan tarkasti Java-olioita, mikä voi mahdollistaa esimerkiksi muistivuotojen löytämisen.
+
+Viimeisin yhteensopivuuteen liittyvä tekijä, jota on syytä pohtia, on luvussa \ref{sec:suorituskyvyntestaustyökalut} mainittu lisämoduulien tuki. Lisämoduuleilla mahdollistetaan suorituskyvyntestaustyökalun toiminnallisuuksien laajentaminen. Aiemmin mainittu ohjelmointirajapinta on erittäin vahva esimerkki hyvästä lisämoduulista, joka nostaa työkalun arvoa. Ohjelmointirajapinnan avulla työkalu voidaan yhdistää omiin sovelluksiin, mikä mahdollistaa esimerkiksi testidatan reaaliaikaisen lukemisen työkalusta. \parencite[143]{TheArtOfApplication} Yhteensopivuuteen keskittyviä lisämoduuleja voi olla myös valmiiksi rakennettu sisään sovellukseen. Laajasti käytettyjen kolmannen osapuolen sovelluksia yhdistävät lisämoduulit ovat yleinen esimerkki sisäänrakennetusta lisämoduulista. \parencite{NeoLoadThirdPartyTools} Näistä sovelluksista tärkeimpiä esimerkkejä ovat DevOps-työkalut (engl. \acrlong{devops} tools).
+
+Jatkuvan integraation hyödyntäminen ohjelmiston testausprosessissa on välttämätöntä, jos haluaa menestyä ohjelmistokehitysyrityksenä \parencite[486]{AgileTestingAPracticalGuide}. Automatisoitujen suorituskyvyntestien lisääminen jatkuvaan integraatioon ja julkaisuun (engl. \acrlong{cicd}, \acrshort{cicd}) voi olla itsestäänselvyydeltä kuulostava asia, mutta työkalut pystyvät tähän vaihtelevalla tasolla. Jotkin työkalut pystyy yhdistämään suoraan kaikkiin yleisiin DevOps-työkaluihin, kun taas toisissa ei ole sisäänrakennettua tukea ja yhdistäminen voi olla huomattavasti vaikeampaa. \parencite{Top27PerformanceTestingTools} Tästä syytä omien DevOps-työkalujen ja -harjoitteiden yhteensopivuuden varmistaminen on tärkeää.
+
+
+\subsection{Käytettävyys ja toiminnot}
+\label{ssec:käytettävyys}
+Käytettävyys viittaa sovelluksen helppokäyttöisyyteen ja loppukäyttäjän tyytyväisyyteen sovelluksen käyttökokemuksesta \parencite{ExtractingUsabilityInformation}. Koska suorituskyvyntestaustyökalut ovat sovelluksia, niitä vertailtaessa käytettävyys on tärkeää ottaa huomioon. Tämä oli huomioitu useassa työkaluja vertailevissa lähteissä \parencite{ScrutinizingAutomatedLoadTesting, ComparativeAnalysisOfWeb,SoftwarePerformanceTesting}. Suorituskyvyntestaustyökalun käytettävyyttä arvioitaessa voidaan ottaa huomioon mitkä tahansa työkalun ominaisuuksista. Aiheen liian suureksi paisumisen välttämiseksi otetaan tarkasteluun vain luvussa \ref{sec:suorituskyvyntestaustyökalut} löydetyistä työkalun ydintoiminnoista kaksi tärkeintä, testien luonti ja tulosten analysointi. Muita tarkasteltavia ominaisuuksia voisivat olla esimerkiksi testien hallinta, testikuorman luonti tai työkalun yhteensopivuus jonkin ulkoisen kolmannen osapuolen sovelluksen kanssa.
+\looseness=1
+
+Eri suorituskyvyntestaustyökalut tarjoavat monia erilaisia tapoja luoda testejä \parencite[15]{TheArtOfApplication}. Käytettävyys näiden eri tapojen, ja niiden toteutusten, välillä voi vaihdella suuresti \parencite{EvaluatingAndImplementing}. Käytettävyyserot testien luomisen välillä voivat johtua esimerkiksi vaikeakäyttöisyydestä, toiminnallisuuksien puutteesta tai koodikielestä. Kołtunin ja Pańczykin (\citeyear{ComparativeAnalysisOfWeb}) tutkielmassa vertailtiin kolmea eri suorituskyvyntestaustyökalua. He löysivät vaikeakäyttöisyyttä erään työkalun testienluontimoduulin konfiguroinnista. Toinen vertailtavissa ollut työkalu toimi suoraan ilman mitään konfigurointia. Toiminnallisuuksien puutteeseen liittyen tutkielmassa painotettiin mahdollisuutta nauhoittaa testejä. Web-sovelluspalveluita testatessa asiat liittyvät usein suoraan loppukäyttäjän toimenpiteisiin. Nauhoittamalla voi helposti luoda testin, joka esimerkiksi kuvastaa yleisiä loppukäyttäjän toimenpiteitä sovelluksessa. Toinen ominaisuuden puute, jota korostettiin tutkielmassa, oli parametrisoinnin puute tai huonous. Parametrisointi kuvastaa työkalun kykyä ottaa vastaan syötettä, jota käytetään testien ajamisessa. Parametrisointiin voidaan käyttää esimerkiksi suurta tietokantaa, joka sisältää esimerkiksi tiettyjä käyttäjätietoja, joita halutaan käyttää testiajossa. Yhdellä vertailussa olleella työkalulla oli todella huono tuki parametrisointiin. Koodikieliin liittyen kaksi vertailtavista työkaluista käytti täysin eri koodikieliä testien luontiin. Kolmas työkalu ei käyttänyt koodikieltä ollenkaan, vaan kaikki tapahtui graafisen käyttöliittymän kautta.
+
+Testien luomisen ja niiden ajon jälkeen päästään suorituskyvyntestaustyökalujen ehkä tärkeimpään toiminnallisuuteen, tulosten analysointiin. Sovellusten yksikkötestaamisesta tuttua läpäisty--hylätty-asteikkoa harvoin käytetään suorituskyvyntestien kanssa. Suorituskyvyntesteistä saadaan usein ulos raakaa dataa, jota pitää analysoida ja käsitellä jollain tavalla. Visualisoinnit joidenkin diagrammien muodossa ovat erinomaisia tähän, koska ne parantavat sovelluksen käytettävyyttä huomattavasti \parencite{ExtractingUsabilityInformation}. Esimerkiksi ajan yli esittämiseen kuvaajat ovat havainnollistavia, tai eri komponenttien suhteellista resurssien kulutusta on kätevä havainnollistaa ympyrädiagrammilla. Erilaiset saatavilla olevat visualisoinnit ja muut datan esitysmuodot vaihtelevat suuresti eri työkalujen välillä \parencite{SoftwareAndPerformanceTestingTools}. Tästä syystä datan esitysmuotoihin kannattaa kiinnittää huomiota suorituskyvyntestaustyökalua valittaessa. Hyvien visualisointien puute ei kuitenkaan välttämättä ole este työkalun käyttöön. Jos työkalussa on hyvät mahdollisuudet datan vientiin, esimerkiksi ohjelmointirajapinnan kautta, voi työkalun yhdistää johonkin ulkopuoliseen ohjelmaan, joka hoitaa datan visualisoinnin.
